@@ -93,7 +93,7 @@ export default function BottomNav() {
 
       <nav className="shrink-0 z-20 flex items-center justify-around px-2 pb-4 pt-2 border-t-2 border-white backdrop-blur-sm bg-white/10">
         {tabs.map((tab) => {
-          const active = isActive(tab.path);
+          const active = isActive(tab.path) && !shopOpen;
 
           if (tab.isShop) {
             const isShopRoute = location.pathname.startsWith('/categories') || location.pathname.startsWith('/brands') || location.pathname.startsWith('/products');

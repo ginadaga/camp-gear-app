@@ -21,14 +21,14 @@ export default function Checkout() {
   return (
     <div>
       <BackButton />
-      <div className="px-6 pb-6 flex flex-col gap-16 items-center">
+      <div className="px-[26px] pb-6 flex flex-col gap-16 items-center">
         <div className="flex flex-col gap-7 items-center w-full">
           {sections.map((section, i) => (
             <button
               key={i}
-              className="w-full h-[70px] bg-white/40 border border-black rounded-[30px] flex items-center justify-between px-5 py-4"
+              className={`w-full ${section.multi ? 'min-h-[93px]' : 'h-[52px]'} bg-[rgba(199,206,182,0.4)] border-[0.5px] border-black rounded-[30px] flex items-center justify-between px-5 py-4 shadow-[0px_4px_4px_0px_rgba(112,113,42,0.15)]`}
             >
-              <div className="text-base text-black" style={{ fontFamily: "'Georgia', serif" }}>
+              <div className="text-[16px] text-black font-['Arial',sans-serif]">
                 {section.single && <p>{section.label}</p>}
                 {section.multi && section.multi.map((line, j) => (
                   <p key={j} className={j > 0 ? 'mt-1' : ''}>{line}</p>
@@ -41,7 +41,7 @@ export default function Checkout() {
 
         <Link
           to="/order-placed"
-          className="bg-brand-green text-white text-xl text-center py-2.5 px-12 rounded-[5px] no-underline"
+          className="bg-[#70712a] text-white text-[20px] text-center py-2.5 px-[50px] rounded-[5px] no-underline font-['Arial',sans-serif]"
         >
           Place Order
         </Link>

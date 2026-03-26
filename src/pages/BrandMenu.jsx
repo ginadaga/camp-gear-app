@@ -45,7 +45,7 @@ export default function BrandMenu() {
       {/* Back button */}
       <button
         onClick={() => navigate(-1)}
-        className="absolute top-4 left-4 z-10 text-black"
+        className="absolute top-4 left-4 z-10 text-white"
         aria-label="Back"
       >
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -54,13 +54,14 @@ export default function BrandMenu() {
       </button>
 
       {/* Brand list */}
-      <div className="flex-1 overflow-y-auto px-8 pt-14 pb-4">
-        {letters.map((letter) => (
-          <div key={letter} id={`brand-${letter}`} className="mb-2">
-            <div className="border-b border-white/50 rounded-lg p-2.5">
-              <p className="font-bold text-base text-black">{letter}</p>
+      <div className="flex-1 overflow-y-auto pl-16 pr-8 pt-4 pb-4">
+        {letters.map((letter, i) => (
+          <div key={letter} id={`brand-${letter}`}>
+            {i > 0 && <div className="h-[50px]" />}
+            <div className="border-b-[0.3px] border-white/70 rounded-[10px] p-[10px]">
+              <p className="font-bold text-base text-black font-['Arial',sans-serif]">{letter}</p>
               {brands[letter].map((brand) => (
-                <p key={brand} className="text-base text-black">{brand}</p>
+                <p key={brand} className="text-base text-black font-['Arial',sans-serif]">{brand}</p>
               ))}
             </div>
           </div>
@@ -68,12 +69,12 @@ export default function BrandMenu() {
       </div>
 
       {/* Alphabet sidebar */}
-      <div className="absolute right-1 top-8 bottom-0 flex flex-col items-center justify-center gap-0.5">
+      <div className="absolute right-[1px] top-[60px] bottom-[70px] flex flex-col items-center justify-center gap-[5px]">
         {letters.map((letter) => (
           <button
             key={letter}
             onClick={() => scrollToLetter(letter)}
-            className="text-[11px] text-black leading-tight"
+            className="text-[15px] font-normal text-black leading-tight font-['Arial',sans-serif]"
           >
             {letter}
           </button>

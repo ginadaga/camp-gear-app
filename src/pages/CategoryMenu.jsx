@@ -37,7 +37,7 @@ export default function CategoryMenu() {
             <button
               key={category}
               onClick={() => navigate(category === 'Clothing' ? '/categories/clothing' : '/products')}
-              className="w-full text-left border-b border-black px-1.5 py-2.5 text-2xl text-black font-normal transition-colors hover:text-[#515050] hover:border-[#515050]"
+              className="w-full text-left border-b border-black px-1.5 py-2.5 text-[20px] text-black font-normal transition-colors hover:text-[#515050] hover:border-[#515050]"
             >
               {category}
             </button>

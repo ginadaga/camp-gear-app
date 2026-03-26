@@ -6,7 +6,7 @@ export default function Reviews() {
       <BackButton />
       <div className="px-5 pb-6 flex flex-col gap-5">
         {/* Product summary bar */}
-        <div className="flex gap-5 items-center justify-center bg-[rgba(112,113,42,0.2)] border-[0.5px] border-black rounded-[30px] overflow-hidden py-2.5">
+        <div className="flex gap-5 items-center justify-center bg-[rgba(199,206,182,0.4)] border-[0.5px] border-black rounded-[30px] overflow-hidden py-2.5">
           <div className="w-[106px] h-[74px] rounded-[20px] overflow-hidden shrink-0">
             <img src="/images/reviews-product-thumb.png" alt="RV Furnace" className="w-full h-full object-cover" />
           </div>
@@ -17,7 +17,7 @@ export default function Reviews() {
         </div>
 
         {/* Reviews card */}
-        <div className="bg-[rgba(112,113,42,0.2)] border-2 border-[#8ac2ed] rounded-[30px] overflow-hidden p-5 flex flex-col gap-5">
+        <div className="bg-[rgba(199,206,182,0.4)] border-2 border-[#8ac2ed] rounded-[30px] overflow-hidden p-5 flex flex-col gap-5">
           <p className="text-base text-black font-bold" style={{ fontFamily: "'Arlen Expanded Bold', 'Arlen', Georgia, serif" }}>
             What people are saying:
           </p>
